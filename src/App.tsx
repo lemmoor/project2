@@ -1,3 +1,5 @@
+import About from './components/About';
+import CodeBasicsSection from './components/CodeBasicsSection';
 import IntroBanner from './components/IntroBanner';
 import Nav from './components/Nav';
 
@@ -6,6 +8,8 @@ function App() {
     <>
       <Nav />
       <IntroBanner />
+      <About />
+      <CodeBasicsSection />
     </>
   );
 }

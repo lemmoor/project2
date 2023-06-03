@@ -20,6 +20,9 @@ export default {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
       },
+      colors: {
+        code: '#1d1f21',
+      },
     },
   },
   plugins: [],
