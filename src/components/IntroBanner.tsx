@@ -26,7 +26,7 @@ function IntroBanner() {
       className="bg-violet-400 grid place-content-center scroll-mt-24"
       id="top"
     >
-      <h1 className="mb-1 text-4xl md:text-6xl dark:text-gray-900 w-64 md:w-[27rem] py-36">
+      <h1 className="mb-1 text-4xl md:text-6xl overflow-y-hidden dark:text-gray-900 w-64 md:w-[27rem] py-36">
         Podstawy&nbsp;
         <span className="inline-flex font-mono h-20 pt-2 overflow-x-hidden animate-type whitespace-nowrap text-brand-accent will-change-transform">
           {textContent}
