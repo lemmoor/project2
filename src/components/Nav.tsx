@@ -4,11 +4,14 @@ import { FaCode } from 'react-icons/fa';
 function Nav() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   return (
-    <nav className="p-4 dark:bg-gray-800 dark:text-gray-100">
+    <nav
+      className="p-4 dark:bg-gray-800 dark:text-gray-100 sticky top-0 z-20 shadow-md"
+      id="nav"
+    >
       <div className="container flex justify-between h-16 mx-auto relative">
         <a
           rel="noopener noreferrer"
-          href="#1"
+          href="#top"
           aria-label="Back to homepage"
           className="flex items-center p-2"
         >
@@ -24,22 +27,22 @@ function Nav() {
           <li className="flex">
             <a
               rel="noopener noreferrer"
-              href="#js"
+              href="#about"
               className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent dark:text-violet-400 dark:border-violet-400"
             >
-              JS
+              Porównanie
             </a>
           </li>
           <li className="flex">
             <a
               rel="noopener noreferrer"
-              href="#php"
+              href="#code"
               className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent"
             >
-              PHP
+              Kod
             </a>
           </li>
-          <li className="flex">
+          {/* <li className="flex">
             <a
               rel="noopener noreferrer"
               href="#cpp"
@@ -47,7 +50,7 @@ function Nav() {
             >
               CPP
             </a>
-          </li>
+          </li> */}
         </ul>
         <button
           className="flex justify-end p-4 md:hidden"
