@@ -4,7 +4,7 @@ import { FaCode } from 'react-icons/fa';
 function Nav() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   return (
-    <header className="p-4 dark:bg-gray-800 dark:text-gray-100">
+    <nav className="p-4 dark:bg-gray-800 dark:text-gray-100">
       <div className="container flex justify-between h-16 mx-auto relative">
         <a
           rel="noopener noreferrer"
@@ -72,7 +72,7 @@ function Nav() {
           </svg>
         </button>
       </div>
-    </header>
+    </nav>
   );
 }
 
