@@ -28,7 +28,7 @@ function Nav() {
             <a
               rel="noopener noreferrer"
               href="#about"
-              className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent dark:text-violet-400 dark:border-violet-400"
+              className="flex items-center px-4 -mb-1 transition border-b-2 dark:border-transparent dark:hover:text-violet-400 dark:hover:border-violet-400"
             >
               Porównanie
             </a>
@@ -37,9 +37,9 @@ function Nav() {
             <a
               rel="noopener noreferrer"
               href="#code"
-              className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent"
+              className="flex items-center px-4 -mb-1 border-b-2 transition dark:border-transparent dark:hover:text-violet-400 dark:hover:border-violet-400"
             >
-              Kod
+              Podstawowe konstrukcje
             </a>
           </li>
           {/* <li className="flex">
