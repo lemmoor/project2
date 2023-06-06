@@ -44,9 +44,17 @@ function CodeBasicsSection() {
       <h3 className="text-3xl my-6 text-center">Instrukcje warunkowe - switch</h3>
       <CodeSnippet
         code={{
-          js: 'let liczba = 2;\n if(liczba === 3){\n  console.log("Ten tekst się wydrukuje jak liczba jest 3")\n} else if(liczba === 1){\n  console.log("Ten tekst się wydrukuje jak liczba jest 4")\n} else{\n  console.log("Ten tekst się wydrukuje jak żaden z poprzednich warunków nie będzie spełniony")\n}',
-          php: '<?php\n  $liczba = 2;\n  if($liczba == 3){\n    echo "Ten tekst się wydrukuje jak liczba jest 3"; \n  } elseif($liczba == 1){\n    echo "Ten tekst się wydrukuje jak liczba jest 4"; \n  } else{\n    echo "Ten tekst się wydrukuje jak żaden z poprzednich warunków nie będzie spełniony"; \n  } \n?>',
-          cpp: '#include <iostream>\nusing namespace std;\n\nint main() {\n  int liczba = 2;\n  if(liczba == 3){\n    cout<<"Ten tekst się wydrukuje jak liczba jest 3";\n  } else if(liczba == 1){\n    cout<<"Ten tekst się wydrukuje jak liczba jest 4";\n  } else{\n    cout<<"Ten tekst się wydrukuje jak żaden z poprzednich warunków nie będzie spełniony";\n  }\n  return 0;\n}',
+          js: 'let liczba = 2;\nswitch(liczba){\n  case 3: //liczba == 3\n    console.log("Trzy")\n    break;\n  case 2: // liczba == 2\n    console.log("Dwa")\n    break;\n  default: // jeśli żaden z poprzednich warunków nie pasuje\n    console.log("Jeden")\n} // Wynik: Dwa',
+          php: '<?php\n  $liczba = 20;\n  switch($liczba){\n    case 3: //liczba == 3\n      echo"Trzy";\n      break;\n    case 2: // liczba == 2\n      echo "Dwa";\n      break;\n    default: // jeśli żaden z poprzednich warunków nie pasuje\n      echo "Jeden";\n  } // Wynik: Jeden \n?>',
+          cpp: '#include <iostream>\nusing namespace std;\n\nint main() {\n  int liczba = 0;\n  switch(liczba){\n    case 0: //liczba == 0\n      cout<<"A";\n      break;\n    case 1: // liczba == 1\n      cout<<"B";\n      break;\n    default: // jeśli żaden z poprzednich warunków nie pasuje\n      cout<<"C";\n  } // Wynik: A\n  return 0;\n}',
+        }}
+      />
+      <h3 className="text-3xl my-6 text-center">Pętle</h3>
+      <CodeSnippet
+        code={{
+          js: 'while(true){\n  //nieskończona pętla\n}\n\nlet liczby = [10, 20, 30, 40, 50]\nfor(let i = 0; i < liczby.length; i++){\n  console.log(liczby[i])\n  if(i === 2){\n    break; //wyjście z pętli\n  }\n} // wydrukuje 102030',
+          php: '<?php\n  $i = 1; \n  while($i < 5){\n    echo $i;\n    $i++;\n  } //wydrukuje 1234\n\n  $litery = [\'a\', \'b\', \'c\'];\n  for($i = 0; $i < count(litery); $i++){\n    echo $litery[$i] . " ";\n  } // wydrukuje a b c \n?>',
+          cpp: '#include <iostream>\nusing namespace std;\n\nint main() {\n  int n = 5;\n  while(n > 0){\n    cout<<n;\n    n--;\n  } //wydrukuje 54321\n\n  int liczby[] = {5, 6, 7};\n  for(int i = 0; i < 3; i++){\n    cout<<liczby[i];\n  } //wydrukuje 567  \n\n  return 0;\n}',
         }}
       />
     </section>
