@@ -30,11 +30,10 @@ function CodeSnippet({ code }: CodeSnippetProps) {
     <div className="container mx-auto mb-10 relative">
       <div className="flex flex-nowrap dark:bg-gray-800 dark:text-gray-100">
         <p
-          className={`px-5 py-3 -mb-0.5 dark:border-gray-100 cursor-pointer ${
-            selectedLang === 'js'
-              ? 'border border-b-0 bg-code rounded-t-lg text-gray-50'
-              : 'text-gray-400'
-          }`}
+          className={`px-5 py-3 -mb-0.5 dark:border-gray-100 cursor-pointer ${selectedLang === 'js'
+            ? 'border border-b-0 bg-code rounded-t-lg text-gray-50'
+            : 'text-gray-400'
+            }`}
           onClick={() => {
             setSelectedLang('js');
           }}
@@ -42,11 +41,10 @@ function CodeSnippet({ code }: CodeSnippetProps) {
           JS
         </p>
         <p
-          className={`px-5 py-3 -mb-0.5 dark:border-gray-100 cursor-pointer ${
-            selectedLang === 'php'
-              ? 'border border-b-0 bg-code rounded-t-lg text-gray-50'
-              : 'text-gray-400'
-          }`}
+          className={`px-5 py-3 -mb-0.5 dark:border-gray-100 cursor-pointer ${selectedLang === 'php'
+            ? 'border border-b-0 bg-code rounded-t-lg text-gray-50'
+            : 'text-gray-400'
+            }`}
           onClick={() => {
             setSelectedLang('php');
           }}
@@ -54,11 +52,10 @@ function CodeSnippet({ code }: CodeSnippetProps) {
           PHP
         </p>
         <p
-          className={`px-5 py-3 -mb-0.5 dark:border-gray-100 cursor-pointer ${
-            selectedLang === 'cpp'
-              ? 'border border-b-0 bg-code rounded-t-lg text-gray-50'
-              : 'text-gray-400'
-          }`}
+          className={`px-5 py-3 -mb-0.5 dark:border-gray-100 cursor-pointer ${selectedLang === 'cpp'
+            ? 'border border-b-0 bg-code rounded-t-lg text-gray-50'
+            : 'text-gray-400'
+            }`}
           onClick={() => {
             setSelectedLang('cpp');
           }}
@@ -72,16 +69,15 @@ function CodeSnippet({ code }: CodeSnippetProps) {
           onClick={copyCode}
         >
           {codeCopied ? (
-            <LuClipboardCheck className="text-inherit w-6 h-6 text-green-500" />
+            <LuClipboardCheck className="text-inherit w-6 h-6 !text-green-500" />
           ) : (
             <LuClipboard className="text-inherit w-6 h-6" />
           )}
         </div>
       </div>
       <div
-        className={`p-4 rounded-lg border border-gray-100 rounded-se-none bg-code ${
-          selectedLang === 'js' ? 'rounded-ss-none' : ''
-        }`}
+        className={`p-4 rounded-lg border border-gray-100 rounded-se-none bg-code ${selectedLang === 'js' ? 'rounded-ss-none' : ''
+          }`}
       >
         <SyntaxHighlighter
           language={selectedLang === 'js' ? 'javascript' : selectedLang}
