@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FaCode } from 'react-icons/fa';
+import { IoMdMenu, IoMdClose } from 'react-icons/io';
 
 function Nav() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -20,13 +21,12 @@ function Nav() {
         <ul
           className={` space-x-3 flex ${
             isMobileOpen
-              ? 'max-md:absolute bg-gray-800 max-md:top-20 max-md:-right-4 max-md:flex-col max-md:items-center max-md:w-40 gap-3 max-md:pt-3 max-md:pb-7'
+              ? 'max-md:absolute bg-gray-800 max-md:top-20 max-md:-left-4 max-md:-right-4 max-md:flex-col max-md:items-center gap-4 max-md:pt-3 max-md:pb-8 '
               : 'max-md:hidden'
           }`}
         >
           <li className="flex">
             <a
-              rel="noopener noreferrer"
               href="#about"
               className="flex items-center px-4 -mb-1 transition border-b-2 dark:border-transparent dark:hover:text-violet-400 dark:hover:border-violet-400"
             >
@@ -35,22 +35,20 @@ function Nav() {
           </li>
           <li className="flex">
             <a
-              rel="noopener noreferrer"
               href="#code"
               className="flex items-center px-4 -mb-1 border-b-2 transition dark:border-transparent dark:hover:text-violet-400 dark:hover:border-violet-400"
             >
               Podstawowe konstrukcje
             </a>
           </li>
-          {/* <li className="flex">
+          <li className="flex">
             <a
-              rel="noopener noreferrer"
-              href="#cpp"
-              className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent"
+              href="#example"
+              className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent transition  dark:hover:text-violet-400 dark:hover:border-violet-400"
             >
-              CPP
+              Przykład - kalkulator
             </a>
-          </li> */}
+          </li>
         </ul>
         <button
           className="flex justify-end p-4 md:hidden"
@@ -59,20 +57,11 @@ function Nav() {
             setIsMobileOpen((p) => !p);
           }}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
+          {isMobileOpen ? (
+            <IoMdClose className="w-8 h-8" />
+          ) : (
+            <IoMdMenu className="w-8 h-8" />
+          )}
         </button>
       </div>
     </nav>
