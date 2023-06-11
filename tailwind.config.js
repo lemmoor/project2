@@ -5,8 +5,7 @@ export default {
     extend: {
       animation: {
         cursor: 'cursor .5s linear infinite alternate',
-        type: 'type 1.2s ease-out infinite alternate both',
-        'type-reverse': 'type 1.8s ease-out 0s infinite alternate-reverse both',
+        type: 'type 1s ease-out infinite alternate both',
       },
       keyframes: {
         type: {
@@ -14,7 +13,7 @@ export default {
           '25%, 30%': { width: '1ch' },
           '55%, 60%': { width: '2ch' },
           '85%, 90%': { width: '3ch' },
-          // '90%': { width: '4ch' },
+          '100%': { width: '3ch' },
         },
       },
       fontFamily: {

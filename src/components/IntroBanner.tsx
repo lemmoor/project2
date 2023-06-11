@@ -3,19 +3,20 @@ import { useEffect, useState } from 'react';
 function IntroBanner() {
   const [textContent, setTextContent] = useState('JS');
   useEffect(() => {
+    const time = 10;
     const changeText = () => {
       setTimeout(() => {
         setTextContent('JS ');
-      }, 0);
+      }, time * 0);
       setTimeout(() => {
         setTextContent('PHP');
-      }, 2400);
+      }, time * 200);
       setTimeout(() => {
         setTextContent('C++');
-      }, 4800);
+      }, time * 400);
     };
     changeText();
-    const intervalID = setInterval(changeText, 7200);
+    const intervalID = setInterval(changeText, time * 600);
     return () => {
       clearInterval(intervalID);
     };
