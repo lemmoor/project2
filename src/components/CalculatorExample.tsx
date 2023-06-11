@@ -11,11 +11,21 @@ function CalculatorExample() {
         >
           Przykładowy program
         </h2>
+
         <p className="dark:text-gray-400 pb-4">
           Kalkulator w każdym z podanych języków
         </p>
+        <h3 className="text-3xl py-4 text-center mt-0">Kalkulator w JS</h3>
 
-        <h3 className="text-3xl py-4 text-center mt-0">Kalkulator w PHP</h3>
+        <iframe
+          title="kalkulator w c++"
+          src="https://replit.com/@lemmoor/kalkulator-js?embed=true"
+          width="800"
+          height="800"
+          className="w-full"
+        />
+
+        <h3 className="text-3xl py-4 text-center mt-4">Kalkulator w PHP</h3>
         <p className="pb-4">
           Kalkulator używa sesji, dla prawidłowego działania trzeba otworzyć
           stronę w{' '}
@@ -33,7 +43,16 @@ function CalculatorExample() {
           title="kalkulator w php"
           src="https://replit.com/@lemmoor/kalkulator?embed=true"
           width="800"
-          height="500"
+          height="800"
+          className="w-full"
+        />
+        <h3 className="text-3xl py-4 text-center mt-4">Kalkulator w C++</h3>
+
+        <iframe
+          title="kalkulator w c++"
+          src="https://replit.com/@lemmoor/kalkulator-cpp?embed=true"
+          width="800"
+          height="800"
           className="w-full"
         />
       </div>
